@@ -11,7 +11,7 @@ while (gameOn) {
 
     userNumber = window.prompt(`Vad är meningen med livet, universum och allting?`)
 
-    if (isNaN(userNumber) || userNumber < 0 || userNumber > 100) {      // Nedanstående "else if sats" fungerade inte men gick att lösa med isNan() ist.
+    if (isNaN(userNumber) || userNumber < 1 || userNumber > 100) {      // Nedanstående "else if sats" fungerade inte men gick att lösa med isNan() ist.
         window.alert(`Du kan bara ange SIFFROR mellan 1 och 100.`)
     }
     // else if (typeof userNumber !== 'number') {                       //Fungerar inte pga window.prompt "returnerar alltid en sträng.
