@@ -11,9 +11,12 @@ while (gameOn) {
 
     userNumber = window.prompt(`Vad är meningen med livet, universum och allting?`)
 
-    if (userNumber < 0 || userNumber > 100) {
-        window.alert(`Ditt nummer måste vara mellan 1 och 100.`)
+    if (isNaN(userNumber) || userNumber < 0 || userNumber > 100) { // Nedanstående "else if sats" fungerade inte så jag gjorde kontrollen med isNan() ist.
+        window.alert(`Du kan bara ange SIFFROR mellan 1 och 100.`)
     }
+    // else if (typeof userNumber !== 'number') {                       //Fungerar inte pga window.prompt "returnerar alltid en sträng.
+    //     window.alert(`Du kan bara ange SIFFROR mellan 1 och 100.`) 
+    // }
     else if (userNumber > secretNumber) {
         window.alert(`För högt.`)
     }
